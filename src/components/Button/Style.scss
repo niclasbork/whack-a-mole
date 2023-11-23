@@ -1,0 +1,15 @@
+button {
+    background: none;
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius-40);
+    padding: 10px 25px;
+    font-size: var(--font-size-28);
+    font-family: var(--font-family);
+    font-weight: 700;
+    cursor: pointer;
+
+    &:hover {
+        background: var(--primary-color);
+        color: var(--secondary-color);
+    }
+}
