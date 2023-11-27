@@ -7,6 +7,8 @@ button {
     font-family: var(--font-family);
     font-weight: 700;
     cursor: pointer;
+    width: max-content;
+    transition: ease-in, .5s;
 
     &:hover {
         background: var(--primary-color);

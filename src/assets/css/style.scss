@@ -8,6 +8,7 @@ $color-beige: rgb(255, 240, 219);
 
 :root {
   font-family: $font-family;
+  font-size: 24px;
   line-height: 1.5;
   font-weight: 400;
 
@@ -29,6 +30,7 @@ $color-beige: rgb(255, 240, 219);
 
   --primary-color: #1F2122;
   --secondary-color: #fff;
+  --third-color: rgb(255, 240, 219);
 
   --background-color: var(--primary-color);
   --text-color: var(--secondary-color);
@@ -45,14 +47,32 @@ $color-beige: rgb(255, 240, 219);
   --space-xl: 80px;
 }
 
-b {
-  font-weight: 600;
+img {
+  user-select: none;
+}
+
+.hello-mole {
+  width: 150px;
+  position: fixed;
+  top: -65px;
+  left: 0;
+  transform: rotate(180deg);
+  transition: ease-in, .2s;
+  cursor: pointer;
+
+  &:hover {
+    top: -30px
+  }
+}
+
+.bold, b {
+  font-weight: 700;
 }
 
 h1 {
   font-size: var(--size-h1);
   font-weight: 700;
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-m);
 }
 
 body {
@@ -64,11 +84,14 @@ body {
   min-height: 100vh;
   user-select: none;
 
-  #app {
-    max-width: 1280px;
+  .App {
+    height: calc(100vh - 2rem - 2px);
+    max-width: 850px;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     padding: 1rem;
+    position: relative;
   }
 }

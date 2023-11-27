@@ -1,0 +1,49 @@
+@import '../../assets/css/config.scss';
+
+.game {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    > .game-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50px;
+        height: 140px;
+        margin: 0 15px;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-position: center 75px;
+        margin-bottom: var(--space-m);
+
+        @include tablet {    
+            width: 200px;
+            height: 140px;
+        }
+
+        > .dirt,  > .mole {
+            position: absolute;
+        }
+
+        > .dirt {
+            max-width: 300px;
+            z-index: 2;
+            bottom: -25px;
+        }
+
+        > .mole {
+            cursor: pointer;
+            max-width: 50px;
+            // z-index: -1;
+            // top: 100%;
+
+
+            @include tablet {    
+                max-width: 100px;
+            }
+        }
+    }
+}
