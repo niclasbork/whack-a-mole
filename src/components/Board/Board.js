@@ -1,28 +1,42 @@
 // Board.js
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Style.scss";
 
-const Board = ({ counter, setCounter, timer, setTimer }) => {
-  const timerFunc = () => {
+const Board = () => {
+  const [counter, setCounter] = useState(0);
+  const [timer, setTimer] = useState(0);
+  let timeUp = false;
+  
+  const initFunc = () => {
     const startGame = document.querySelector(".start-game");
-    let intervalId;
     startGame.addEventListener("click", () => {
-      intervalId = setInterval(() => {
-        setTimer((time) => {
-          if (time === 10 - 1) {
-            clearInterval(intervalId);
-          }
-          return time + 1;
-        });
-      }, 1000);
+      setTimer(0);
+      setCounter(0);
+      setIntervalFunc();
+      animateFunc();
+      hitEventFunc();
+      timeUp = false;
     });
   };
 
-  const hitEvent = () => {
-    const countHit = document.querySelectorAll(".mole");
+  const setIntervalFunc = () => {
+    let intervalIdTime = setInterval(() => {
+      setTimer((time) => {
+        if (time === 10 - 1) {
+          clearInterval(intervalIdTime);
+          timeUp = true
+        }
+        return time + 1;
+      });
+    }, 1000);
+  };
 
+  const hitEventFunc = () => {
+    setCounter(0);
+    const countHit = document.querySelectorAll(".mole");
     const countHitFunc = (e) => {
       console.log("clicked", e.target);
+      console.log("Hit!");
       setCounter((count) => count + 1);
     };
 
@@ -31,11 +45,27 @@ const Board = ({ counter, setCounter, timer, setTimer }) => {
     });
   };
 
+  const randomHole = () => {
+    const holes = document.querySelectorAll(".hole")
+    const id = Math.floor(Math.random() * holes.length);
+    console.log(id);
+    const hole = holes[id];
+    return hole;
+  };
+
+  const animateFunc = (holes) => {
+    const time = Math.round(Math.random() * (1000 - 500) + 500);
+    const hole = randomHole(holes);
+    hole.classList.add('up');
+    setTimeout(() => {
+        hole.classList.remove('up');
+        if (!timeUp) animateFunc();
+    }, time);
+  };
+
   useEffect(() => {
-    hitEvent();
-    const intervalId = timerFunc();
-    return () => clearInterval(intervalId);
-  }, [setCounter, setTimer]);
+    initFunc();
+  }, []);
 
   return (
     <div className="board">

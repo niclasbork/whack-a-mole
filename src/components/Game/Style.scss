@@ -6,13 +6,13 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    > .game-item {
+    > .hole {
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 50px;
-        height: 140px;
+        height: 150px;
         margin: 0 15px;
         overflow: hidden;
         background-repeat: no-repeat;
@@ -21,7 +21,22 @@
 
         @include tablet {    
             width: 200px;
-            height: 140px;
+        }
+
+        &::after {
+            content: "";
+            background: url(../../assets/img/dirt.svg) bottom center no-repeat;
+            background-size: contain;
+            width: 200px;
+            height: 80px;
+            position: absolute;
+            bottom: -15px;
+        }
+
+        &.up {
+            .mole {
+                top: 0;
+            }
         }
 
         > .dirt,  > .mole {
@@ -37,9 +52,8 @@
         > .mole {
             cursor: pointer;
             max-width: 50px;
-            // z-index: -1;
-            // top: 100%;
-
+            top: 75%;
+            transition: ease-in, .5s;
 
             @include tablet {    
                 max-width: 100px;
