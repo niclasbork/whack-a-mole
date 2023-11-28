@@ -76,6 +76,10 @@ h1 {
   margin-bottom: var(--space-m);
 }
 
+body, .hit-item, button {
+  cursor: url("../img/cursor.png"), auto;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -94,6 +98,5 @@ body {
     flex-direction: column;
     padding: 1rem;
     position: relative;
-    cursor: url("../img/cursor.png"), auto;
   }
 }
