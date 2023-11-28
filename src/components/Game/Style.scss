@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    > .hole {
+    > .game-item {
         position: relative;
         display: flex;
         flex-direction: column;
@@ -34,22 +34,22 @@
         }
 
         &.up {
-            .mole {
+            .hit-item {
                 top: 0;
             }
         }
 
-        > .dirt,  > .mole {
+        > .layer,  > .hit-item {
             position: absolute;
         }
 
-        > .dirt {
+        > .layer {
             max-width: 300px;
             z-index: 2;
             bottom: -25px;
         }
 
-        > .mole {
+        > .hit-item {
             cursor: pointer;
             max-width: 50px;
             top: 75%;

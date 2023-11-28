@@ -32,7 +32,7 @@ const Board = () => {
 
   const hitEventFunc = () => {
     setCounter(0);
-    const countHit = document.querySelectorAll(".mole");
+    const countHit = document.querySelectorAll(".hit-item");
     const countHitFunc = (e) => {
       console.log("clicked", e.target);
       console.log("Hit!");
@@ -45,7 +45,7 @@ const Board = () => {
   };
 
   const randomHole = () => {
-    const holes = document.querySelectorAll(".hole")
+    const holes = document.querySelectorAll(".game-item")
     const id = Math.floor(Math.random() * holes.length);
     console.log(id);
     const hole = holes[id];
