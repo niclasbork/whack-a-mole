@@ -49,6 +49,11 @@ $color-beige: rgb(255, 240, 219);
 
 img {
   user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
 .hello-mole {
