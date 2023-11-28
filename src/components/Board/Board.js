@@ -14,7 +14,6 @@ const Board = () => {
       setCounter(0);
       setIntervalFunc();
       animateFunc();
-      hitEventFunc();
       timeUp = false;
     });
   };
@@ -65,6 +64,7 @@ const Board = () => {
 
   useEffect(() => {
     initFunc();
+    hitEventFunc();
   }, []);
 
   return (
