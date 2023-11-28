@@ -12,18 +12,20 @@ const Board = () => {
     startGame.addEventListener("click", () => {
       setTimer(0);
       setCounter(0);
-      setIntervalFunc();
+      setIntervalFunc(startGame);
       animateFunc();
       timeUp = false;
+      startGame.disabled = true;
     });
   };
 
-  const setIntervalFunc = () => {
+  const setIntervalFunc = (elem) => {
     let intervalIdTime = setInterval(() => {
       setTimer((time) => {
         if (time === 10 - 1) {
           clearInterval(intervalIdTime);
           timeUp = true
+          elem.disabled = false;
         }
         return time + 1;
       });

@@ -50,6 +50,11 @@
         }
 
         > .hit-item {
+            user-drag: none;
+            -webkit-user-drag: none;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
             cursor: pointer;
             max-width: 50px;
             top: 75%;

@@ -14,4 +14,13 @@ button {
         background: var(--primary-color);
         color: var(--secondary-color);
     }
+
+    &:disabled {
+        cursor: not-allowed;
+        color: var(--primary-color);
+
+        &:hover {
+            background: none;
+        }
+    }
 }
