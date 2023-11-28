@@ -1,9 +1,9 @@
 <h1>WHACK-A-MOLE!</h1>
-<ul style="list-style: none; display: flex; justify-content: flex-start;">
-    <li><img width="50" src="./public/mole-01.png" alt="WHACK-A-MOLE!"></li>
-    <li><img width="50" src="./public/mole-02.png" alt="WHACK-A-MOLE!"></li>
-    <li><img width="50" src="./public/mole-03.png" alt="WHACK-A-MOLE!"></li>
-</ul>
+<p float="left">
+<img width="50" src="./public/mole-01.png" alt="WHACK-A-MOLE!">
+<img width="50" src="./public/mole-02.png" alt="WHACK-A-MOLE!">
+<img width="50" src="./public/mole-03.png" alt="WHACK-A-MOLE!">
+</p>
 
 ## Vervel preview:
 https://whack-a-mole-rose.vercel.app/
