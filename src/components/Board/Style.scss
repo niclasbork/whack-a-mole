@@ -1,6 +1,12 @@
+@import '../../assets/css/config.scss';
+
 .board {
-    font-size: 42px;
+    font-size: 34px;
     display: flex;
     justify-content: space-around;
-    margin-bottom: var(--space-m);
+    margin-bottom: var(--space-s);
+
+    @include tablet {
+        font-size: 42px;
+    }
 }

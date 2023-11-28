@@ -55,11 +55,11 @@ img {
 .hello-mole {
   width: 88px;
   position: fixed;
-  top: -65px;
-  left: 0;
   transform: rotate(180deg);
   transition: ease-in, .2s;
   cursor: pointer;
+  left: 5px;
+  top: -65px;
 
   &:hover {
     top: -30px
@@ -94,5 +94,6 @@ body {
     flex-direction: column;
     padding: 1rem;
     position: relative;
+    cursor: url("../img/cursor.png"), auto;
   }
 }

@@ -1,6 +1,7 @@
 // Board.js
 import React, { useEffect, useState } from "react";
 import "./Style.scss";
+import Pow from "../../assets/img/pow.png";
 
 const Board = () => {
   const [counter, setCounter] = useState(0);
@@ -35,10 +36,18 @@ const Board = () => {
   const hitEventFunc = () => {
     setCounter(0);
     const countHit = document.querySelectorAll(".hit-item");
+    const signalHit = document.createElement("img");
+    signalHit.src = Pow;
+    signalHit.classList = "pow";
     const countHitFunc = (e) => {
       console.log("clicked", e.target);
       console.log("Hit!");
       setCounter((count) => count + 1);
+      const signal = e.target.parentNode;
+      signal.append(signalHit);
+      setTimeout(() => {
+        signalHit.remove();
+      }, 300);
     };
 
     countHit.forEach((mole) => {

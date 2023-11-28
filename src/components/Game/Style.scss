@@ -5,42 +5,52 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: var(--space-m);
 
     > .game-item {
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100px;
-        height: 150px;
+        width: 80px;
+        height: 80px;
         margin: 0 15px;
         overflow: hidden;
-        margin-bottom: var(--space-m);
+        margin-bottom: var(--space-s);
 
-        @include tablet {    
+        @include tablet {
             width: 200px;
+            height: 150px;
         }
 
         &::before {
             content: "";
-            background: url("../../assets/img/hole-top.png") bottom center no-repeat;
+            background: url("../../assets/img/hole-top.png") bottom center no-repeat transparent;
             background-size: contain;
             width: 100%;
             height: 34px;
             position: absolute;
-            bottom: 18px;
+            bottom: 10px;
             z-index: -1;
+
+            @include tablet {
+                bottom: 18px;
+            }
         }
 
         &::after {
             content: "";
             background: url("../../assets/img/hole-bottom.png") bottom center no-repeat rgb(255, 240, 219);
+            background-size: contain;
             width: 100%;
-            height: 18px;
+            height: 11px;
             position: absolute;
             bottom: 0px;
             z-index: 1;
-            border-radius: 40px;
+
+            @include tablet {
+                height: 18px;
+            }
         }
 
         &.up {
@@ -68,6 +78,12 @@
             @include tablet {    
                 max-width: 100px;
             }
+        }
+
+        > .pow {
+            max-width: 80px;
+            z-index: 3;
+            transform: translate(50px, 10px);
         }
     }
 }
