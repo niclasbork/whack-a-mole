@@ -2,8 +2,11 @@
     <h1>WHACK-A-MOLE!</h1>
     <img width="80" src="./public/mole.svg" alt="WHACK-A-MOLE!">
 </p>
-<br/>
 
+## Vervel preview:
+https://whack-a-mole-rose.vercel.app/
+<br/>
+<br/>
 # Getting Started with Create React App
 <img width="80" src="./public/logo192.png" alt="React logo">
 
@@ -43,7 +46,4 @@ npm run eject
 ## License
 
 [MIT](LICENSE).
-
-## Vervel preview:
-https://whack-a-mole-rose.vercel.app/
 
