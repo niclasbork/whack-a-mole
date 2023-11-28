@@ -1,6 +1,8 @@
 <p align="center">
     <h1>WHACK-A-MOLE!</h1>
-    <img width="50" src="./public/mole.svg" alt="WHACK-A-MOLE!">
+    <img width="50" src="./public/mole-01.png" alt="WHACK-A-MOLE!">
+    <img width="50" src="./public/mole-02.png" alt="WHACK-A-MOLE!">
+    <img width="50" src="./public/mole-03.png" alt="WHACK-A-MOLE!">
 </p>
 
 ## Vervel preview:

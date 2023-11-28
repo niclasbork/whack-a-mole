@@ -21,14 +21,26 @@
             width: 200px;
         }
 
-        &::after {
+        &::before {
             content: "";
-            background: url("../../assets/img/dirt.svg") bottom center no-repeat;
+            background: url("../../assets/img/hole-top.png") bottom center no-repeat;
             background-size: contain;
             width: 100%;
-            height: 80px;
+            height: 34px;
             position: absolute;
-            bottom: -15px;
+            bottom: 18px;
+            z-index: -1;
+        }
+
+        &::after {
+            content: "";
+            background: url("../../assets/img/hole-bottom.png") bottom center no-repeat rgb(255, 240, 219);
+            width: 100%;
+            height: 18px;
+            position: absolute;
+            bottom: 0px;
+            z-index: 1;
+            border-radius: 40px;
         }
 
         &.up {
@@ -50,7 +62,7 @@
         > .hit-item {
             cursor: pointer;
             max-width: 50px;
-            top: 75%;
+            top: 100%;
             transition: ease-in, .5s;
 
             @include tablet {    
