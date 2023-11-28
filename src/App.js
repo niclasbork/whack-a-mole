@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <h1>WHACK-A-MOLE!</h1>
-      <img src={Mole} alt="" className="hello-mole hello-mole--1" />
+      <img src={Mole} alt="" className="hello-mole" />
       <Button name="Load Game" className="load-game" />
       <GameField />
     </div>
