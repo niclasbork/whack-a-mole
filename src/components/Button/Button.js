@@ -3,8 +3,8 @@ import "./Style.scss";
 
 const Button = (props) => {
     return (
-        <button className={props.className}>
-            {props.name}
+        <button className={ props.className }>
+            { props.name }
         </button>
     ); 
 };

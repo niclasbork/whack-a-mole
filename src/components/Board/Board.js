@@ -72,10 +72,10 @@ const Board = () => {
   return (
     <div className="board">
       <div className="score">
-        Your score: <span className="bold counter">{counter}</span>
+        Your score: <span className="bold counter">{ counter }</span>
       </div>
       <div className="timer">
-        Time: <span className="time bold">{timer}</span>
+        Time: <span className="time bold">{ timer }</span>
       </div>
     </div>
   );
