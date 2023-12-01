@@ -18,6 +18,7 @@ const Board = () => {
       timeUp = false;
       startGame.disabled = true;
     });
+    hitEventFunc();
   };
 
   const setIntervalFunc = (elem) => {
@@ -38,7 +39,7 @@ const Board = () => {
     const countHit = document.querySelectorAll(".hit-item");
     const signalHit = document.createElement("img");
     signalHit.src = Pow;
-    signalHit.classList = "pow";
+    signalHit.classList = "hit";
     const countHitFunc = (e) => {
       console.log("clicked", e.target);
       console.log("Hit!");
@@ -75,7 +76,6 @@ const Board = () => {
 
   useEffect(() => {
     initFunc();
-    hitEventFunc();
   }, []);
 
   return (
