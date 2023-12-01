@@ -11,7 +11,7 @@ const GameField = () => {
             <Board />
             <Game />
             <div className="control">
-            <Button name="Start Game" className="start-game" />
+                <Button name="Start Game" className="start-game" />
             </div>
         </div>
     );

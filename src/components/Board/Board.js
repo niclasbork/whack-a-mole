@@ -6,7 +6,7 @@ import Pow from "../../assets/img/pow.png";
 const Board = () => {
   const [counter, setCounter] = useState(0);
   const [timer, setTimer] = useState(0);
-  let timeUp = false;
+  let timeUp;
   
   const initFunc = () => {
     const startGame = document.querySelector(".start-game");
